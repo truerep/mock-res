@@ -7,7 +7,7 @@ import {
   redirect
 } from 'next/navigation';
 
-import styles from './InitializingApp.module.css';
+import styles from '../../../app/styles/InitializingApp.module.css';
 import InitializingApp from './InitializingApp';
 import {
   generateRandomEndpoint
