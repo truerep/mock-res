@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;600&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+  --max-width: 1200px;
+  --border-radius: 12px;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 55, 46, 79;
+  --background-end-rgb: 13, 17, 23;
+
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #16abff33 0deg,
+    #0885ff33 55deg,
+    #54d6ff33 120deg,
+    #0071ff33 160deg,
+    transparent 360deg
+  );
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "quicksand", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    background-repeat: no-repeat;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "quicksand", sans-serif;
+}
+
+button {
+  font-family: "quicksand", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.btn-primary {
+  background: #6540e7;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 30px 0 rgba(101, 64, 231, 0.5);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+*::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #28262e; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #4a455a; /* Color of the scrollbar track */
+}

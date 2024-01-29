@@ -1,0 +1,90 @@
+.section {
+    color: #fff;
+}
+
+.stepContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 0;
+    font-size: 22px;
+}
+
+.steps {
+    position: relative;
+    min-width: 280px;
+}
+
+.steps li {
+    padding: 15px 0;
+    padding-left: 35px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+    opacity: 0;
+    white-space: pre;
+}
+
+.steps li.settled {
+    position: relative;
+    bottom: unset;
+    opacity: 1!important;
+    transform: unset;
+}
+
+.steps li.settled::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 20px;
+    width: 20px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3106/3106690.png");
+    background-size: 80%;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+}
+
+.steps li.settled + li {
+    opacity: 0.5;
+}
+
+.steps li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+}
+
+.steps li.settled.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    animation: spin 0.7s linear infinite;
+    background-color: transparent;
+    background-image: unset;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
