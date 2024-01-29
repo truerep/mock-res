@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styles from '../../../app/styles/InitializingApp.module.css';
+import styles from './styles.module.css';
 
 const InitializingApp = ({
   handleLiClass,

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../../app/styles/CreateEndPoint.module.css';
+import styles from './styles.module.css';
 
 const dummy = {
   user_id: 123,
